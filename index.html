@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IndieRadio</title>
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Load FontAwesome icons -->
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  
+  <div>
+    <a href="https://twitter.com/khushiinayak">
+    <i class="fa-brands fa-twitter  fa-2x"></i></a> 
+    <li class="brand"><img src="logo.png" alt="LofiRadio">IndieRadio</li>
+  </div>
+    <div class="container">
+    <div class="player">
+      <br><br><br>
+      <div class="track-name">Name</div>  
+      <div class="slider_container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+      </div>
+        <div class="buttons"> 
+        <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-3x"></i></div>
+        <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play fa-4x"></i></div>
+        <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-3x"></i></div>
+
+        <div class="slider_container">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+        <i class="fa fa-volume-up"></i>
+      </div></div>
+    </div>
+  </div>
+  
+  <script src="kit.js"></script>
+  <script src="https://kit.fontawesome.com/57c784e2b8.js" crossorigin="anonymous"></script>
+  <!-- Load the main script for the player -->
+  <script src="main.js"></script>
+</body>
+</html>

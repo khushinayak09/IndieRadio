@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+html {
+  cursor: url('../IndieRadio/cursor.svg'), pointer;
+  
+}
+body {
+  background-size: 100% 100%;
+  background-position: contain;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Hide scrollbars */
+  color: #f5f4f6;
+  font: 1.3rem Inconsolata,monospace;
+  text-shadow: 0 0 5px #f5f4f6;
+  resize: both;
+  -webkit-text-size-adjust: 100%;
+  filter: brightness(1.75);
+  text-align: left;
+}
+/* Linear Gradient*/
+body{background-color:#000;background:-webkit-radial-gradient(right 34% bottom 10%,ellipse,#33202a,#000 80%,#000);background:radial-gradient(ellipse at right 34% bottom 10%,#33202a,#000 80%,#000);background-position:contain;
+  background-size:100% 100% ; background-repeat: no-repeat;height:100vh;margin:0;overflow:hidden;color:#f5f4f6;font:1.3rem Inconsolata,monospace;text-shadow:0 0 5px #f5f4f6}
+  body:after{opacity:.3;background:-webkit-repeating-linear-gradient(bottom,#000,#000 2px,transparent,transparent 4px);background:repeating-linear-gradient(0deg,#000,#000 2px,transparent,transparent 4px)}
+  body:after,body:before{content:"";position:absolute;top:0;left:0;width:100vw;height:100vh;pointer-events:none}
+  body:before{z-index:1000;opacity:.4;background:-webkit-radial-gradient(right 34% bottom 10%,ellipse,transparent 60%,#000);background:radial-gradient(ellipse at right 34% bottom 10%,transparent 60%,#000)}::selection{background:#33202a;text-shadow:none}
+  pre{margin:0;white-space:pre-wrap;-webkit-animation:text-blink .01s steps(2) infinite;animation:text-blink .01s steps(2) infinite}
+  @-webkit-keyframes text-blink{0%,to{opacity:1}50%{opacity:.79}}
+  @keyframes text-blink{0%,to{opacity:1}50%{opacity:.79}}
+  @-webkit-keyframes blink{0%,to{opacity:1}50%{opacity:0}}
+  @keyframes blink{0%,to{opacity:1}50%{opacity:0}}
+  #output:after{content:"▮";opacity:1;-webkit-animation:blink 1s steps(1) infinite;animation:blink 1s steps(1) infinite}
+  #output.gw-writing:after{-webkit-animation:none;animation:none}
+  iframe{display:none}.invisible{position:absolute;width:0;height:0;border:0}
+  .icon{position:fixed;bottom:2rem;left:3rem;padding:10px;display:flex}
+  .pericon{margin:5px}.title{color:#fff;text-transform:capitalize;font:400;font-family:monospace;font-size:1.5rem;position:fixed;bottom:6.5rem;left:4rem;margin-right:2rem}.feathericon{cursor:pointer}.UpperBox{position:absolute;top:2rem;right:4rem}.handles{display:block;float:right}.UpperBox .feathericon{margin:10px}.displaybox{display:contents;font-size:medium}.gif{-webkit-object-fit:cover;object-fit:cover;top:0;left:0;z-index:0;width:100vw;height:100vh;position:absolute}.profileheading{margin-top:10px;font-size:1rem;font-weight:700}.profilebox{grid-gap:8%;gap:8%;padding-right:20px}.profile{width:5rem;border:2px solid #ccf604}.profilename{margin-top:10px;font-size:.9rem;display:flex}.profilename pre{display:flex;align-items:center;font-weight:700}.profilename a{font-weight:700;color:#ccf604!important;text-decoration:none!important}.shortkeys{margin-top:6px;font-size:1rem;line-height:1.5;white-space:normal;padding:5px 4rem 5px 0}.shortkeys .arrows{display:flex;align-items:center}.shortkeys a{font-weight:700}.volumebar{position:absolute;bottom:3.2rem;left:18.5rem;padding:10px;display:flex}.volumebar .slider{-webkit-appearance:none;width:100%;height:3px;background:#f1e7e7;border:2px solid #ccf604;border-radius:1rem;outline:none}.volumebar .slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;border-radius:1rem;width:15px;height:15px;background:#ccf604;cursor:pointer}.volumebar .slider::-moz-range-thumb{width:15px;height:15px;background:#ccf604;cursor:pointer}@media only screen and (max-width:1000px){.content,.title{bottom:6.5rem;left:2rem;font-size:1.5rem;margin-right:2rem}.icon{bottom:2rem;left:1rem}.UpperBox{top:1rem;right:.7rem}.volumebar{bottom:2rem!important;left:1.4rem!important}}@media only screen and (max-width:41090px){.content,.title{bottom:8.5rem}.icon{bottom:4rem}.volumebar{bottom:2rem;left:3.5rem}
+
+}
+.brand img{
+  width: 44px;
+  padding: 0 8px;
+  -webkit-filter: drop-shadow(0 0 5px rgb(218, 170, 209)); 
+  filter: drop-shadow(0 0 5px rgb(218, 170, 209));          
+  filter: drop-shadow(0 0 0 5px rgb(218, 170, 209));  
+}
+.brand{
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+  9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  animation: shadows 1.2s ease-in infinite,5s linear 2s infinite alternate slidein;;
+  letter-spacing: 0.4rem;
+  font-style: bold;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: white;
+}
+.fa-brands.fa-twitter{
+  float:right;
+  top: 20%;
+  transition: opacity .2s;
+  opacity: 0.8;
+  color: white;
+  cursor: url('../IndieRadio/cursor.svg'), pointer;
+}
+.fa-brands.fa-twitter:hover{
+  opacity: 1.0;
+}
+
+.share img{
+  width: 44px;
+  padding: 0 8px;
+  -webkit-filter: drop-shadow(0 0 5px rgb(218, 170, 209)); 
+  filter: drop-shadow(0 0 5px rgb(218, 170, 209));          
+  filter: drop-shadow(0 0 0 5px rgb(218, 170, 209));
+}
+.share{
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+  9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  animation: shadows 1.2s ease-in infinite,5s linear 2s infinite alternate slidein;;
+  letter-spacing: 0.4rem;
+  font-style: bold;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+.share {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: white;
+  float:right;
+}
+.player {
+  min-height: 92vh;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  resize: both;
+  margin: 23px auto;
+  width: 90%;
+  padding: 34px;
+}
+
+.track-name {
+  font-size: 2rem;
+  position: relative;
+  text-align: left;
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+  9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  animation: shadows 1.2s ease-in infinite,5s linear 2s infinite alternate slidein;;
+  letter-spacing: 0.4rem;
+  font-style: bold;
+  font-style: italic;
+}
+
+.buttons {
+  position: -webkit-sticky;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position:sticky ;
+  resize: both;
+}
+
+.container{
+  min-height: 92vh;
+  /*background-color: black;*/
+  color: white;
+ font-family: 'Varela Round', sans-serif;
+ display: flex;
+ margin: 23px auto;
+ width: 70%;
+ border-radius: 12px;
+ padding: 34px;
+ resize: both;
+ text-align: left;
+ /*background-image: url('bg.jpg');*/
+}
+
+.playpause-track, .prev-track, .next-track {
+  padding: 20px;
+  opacity: 0.8;
+  position:relative;
+
+
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+  opacity: 1.0;
+}
+
+.slider_container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background:white;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: url('../IndieRadio/cursor.svg'), pointer;
+  border-radius: 50%;
+}
+
+
+.seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 80vw; 
+  cursor: url('../IndieRadio/cursor.svg'), pointer;
+  resize: both;
+}
+
+.volume_slider {
+  width: 30%;
+  cursor: url('../IndieRadio/cursor.svg'), pointer;
+}
+
+.current-time, .total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down, i.fa-volume-up {
+  padding: 10px;
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+  cursor: url('../IndieRadio/cursor.svg'), pointer;
+  position: sticky;
+}
+
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  body {
+  background-color: green;
+  }
+}
+
